@@ -102,7 +102,10 @@ public class RotationPlace extends BlockPlaceCheck {
                 Ray trace = new Ray(player, starting.getX(), starting.getY(), starting.getZ(), lookDir.getX(), lookDir.getY());
                 Pair<Vector, BlockFace> intercept = ReachUtils.calculateIntercept(box, trace.getOrigin(), trace.getPointAtDistance(6));
 
-                if (intercept.getFirst() != null) return true;
+                if (intercept.getFirst() != null) {
+                    System.out.println("true");
+                    return true;
+                }
             }
         }
 
